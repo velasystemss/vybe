@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>VYBE. Gizlilik Politikası</title>
+<style>
+  :root { --accent:#6C5CE7; --ink:#12121A; --muted:#4A4A5A; --line:#E4E4EC; --bg:#FFFFFF; }
+  @media (prefers-color-scheme: dark) {
+    :root { --accent:#8577F0; --ink:#F4F4F8; --muted:#B8B8C6; --line:#2A2A38; --bg:#12121A; }
+  }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  main { max-width:720px; margin:0 auto; padding:40px 20px 80px; }
+  h1 { font-size:1.7rem; line-height:1.25; margin:0 0 .25rem; }
+  h2 { font-size:1.15rem; margin:2.2rem 0 .6rem; padding-top:1rem; border-top:1px solid var(--line); }
+  h3 { font-size:1rem; margin:1.4rem 0 .4rem; }
+  p, li { color:var(--ink); }
+  .lead { color:var(--muted); }
+  .updated { color:var(--muted); font-size:.9rem; margin:0 0 1.5rem; }
+  a { color:var(--accent); }
+  ul { padding-left:1.25rem; }
+  li { margin:.3rem 0; }
+  table { width:100%; border-collapse:collapse; margin:.75rem 0; font-size:.93rem; display:block; overflow-x:auto; }
+  th, td { text-align:left; vertical-align:top; padding:.5rem .6rem; border:1px solid var(--line); }
+  th { background:color-mix(in srgb, var(--accent) 10%, transparent); font-weight:600; }
+  code { background:color-mix(in srgb, var(--muted) 15%, transparent); padding:.1em .35em; border-radius:4px; font-size:.9em; }
+  footer { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><strong>Türkçe</strong> · <a href="./en.html">English</a></p>
+  <h1>VYBE. Gizlilik Politikası</h1>
+  <p class="updated"><strong>Son güncelleme:</strong> 7 Eylül 2026</p>
+
+  <p class="lead">Bu Gizlilik Politikası, VYBE. mobil uygulamasını ("Uygulama") kullanırken
+  hangi verilerin toplandığını, nasıl kullanıldığını, kimlerle paylaşıldığını ve haklarınızı
+  açıklar. Politika, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") ve Avrupa Birliği
+  Genel Veri Koruma Tüzüğü ("GDPR") kapsamında hazırlanmıştır.</p>
+
+  <h2>1. Veri Sorumlusu ve İletişim</h2>
+  <p>VYBE., bağımsız bir bireysel geliştirici tarafından işletilmektedir ve bu Uygulama
+  kapsamında işlenen veriler açısından veri sorumlusudur ("Geliştirici", "biz"). Şirket tüzel
+  kişiliği bulunmamaktadır.</p>
+  <p>Gizlilikle ilgili tüm sorularınız ve talepleriniz için:
+  <a href="mailto:velalabss@gmail.com">velalabss@gmail.com</a></p>
+
+  <h2>2. Hangi Verileri Topluyoruz ve Neden</h2>
+
+  <h3>a. Anonim cihaz kimliği</h3>
+  <p>Uygulamayı ilk açtığınızda, cihazınızda rastgele bir kimlik (UUID) üretilir ve cihazınızın
+  güvenli deposunda (iOS Keychain / Android Keystore) saklanır. Bu kimlik, adınızı, e-posta
+  adresinizi veya cihazınızı kullanan kişiyi belirlemez; yalnızca ücretsiz kullanım kotanızı
+  takip etmek ve isteğe bağlı aboneliğinizi tanımlamak için kullanılır.</p>
+
+  <h3>b. Yüklediğiniz ekran görüntüleri</h3>
+  <p>Analiz için seçtiğiniz ekran görüntüsü, cevap önerileri üretilmesi amacıyla sunucularımız
+  üzerinden yapay zeka servis sağlayıcımıza (Anthropic) iletilir. Görsel, isteğin işlenmesi
+  süresince bellekte tutulur ve <strong>hiçbir sunucumuzda kalıcı olarak saklanmaz</strong>.</p>
+
+  <h3>c. Abonelik durumu</h3>
+  <p>VYBE. Premium'a abone olup olmadığınızı doğrulamak için, her cevap üretme isteğinde
+  anonim cihaz kimliğiniz abonelik altyapı sağlayıcımız RevenueCat'e iletilir. Bir satın alma
+  işlemi yaptığınızda, ürün kimliği, satın alma/bitiş tarihleri ve abonelik durumu RevenueCat
+  tarafında saklanır. Kart veya ödeme bilgileriniz bize veya RevenueCat'e hiçbir zaman ulaşmaz;
+  bu bilgiler doğrudan Apple/Google tarafında işlenir.</p>
+
+  <h3>d. Bildirim token'ı (isteğe bağlı)</h3>
+  <p>Bildirim izni verirseniz, cihazınıza özel bir bildirim token'ı sunucumuzda anonim cihaz
+  kimliğinizle birlikte saklanır.</p>
+
+  <h3>e. Kullanım analitiği</h3>
+  <p>Uygulama, ürün geliştirme amacıyla anonim kullanım istatistikleri (örneğin hangi tonun
+  seçildiği, bir işlemin başarılı olup olmadığı) toplayabilecek bir analitik altyapısına
+  sahiptir. <strong>Bu özellik şu an devre dışıdır</strong>; etkinleştirildiğinde bile mesaj
+  içeriği, ekran görüntüsü veya öneri metni gönderilmez, yalnızca anonim etkileşim meta verisi
+  toplanır.</p>
+
+  <h3>f. IP adresi (kötüye kullanım koruması)</h3>
+  <p>Cevap üretme isteklerinde, otomatik ve toplu istekleri engellemek amacıyla isteğin geldiği
+  IP adresi geçici olarak kaydedilir. Bu kayıt en fazla 24 saat tutulur ve otomatik olarak
+  silinir; cihaz kimliğiniz veya içerikle ilişkilendirilmez.</p>
+
+  <h3>g. Cihazınızda kalan, bize hiç ulaşmayan veriler</h3>
+  <p>Aşağıdaki bilgiler yalnızca cihazınızda saklanır ve sunucularımıza hiçbir zaman
+  gönderilmez: isteğe bağlı olarak girdiğiniz karakter profili (yaş aralığı ve tarz tercihi —
+  bunlar sadece daha kişisel öneriler üretmek için, siz izin verdiğinizde, ilgili tek istekle
+  birlikte sunucuya gönderilir), dil tercihiniz ve onboarding ekranını görüp görmediğiniz
+  bilgisi.</p>
+
+  <h3>Toplamadığımız veriler</h3>
+  <p>Adınızı, e-posta adresinizi, telefon numaranızı, konumunuzu, rehberinizi veya sosyal
+  medya hesaplarınızı toplamıyoruz. Mesajlaşma uygulamalarınıza erişimimiz yoktur; yalnızca siz
+  kendiniz bir ekran görüntüsü seçip yüklediğinizde o görseli işleriz.</p>
+
+  <h2>3. Verilerinizi Kimlerle Paylaşıyoruz</h2>
+  <p>Verileriniz, aşağıdaki hizmet sağlayıcılarla, yalnızca belirtilen amaçlar için paylaşılır:</p>
+  <table>
+    <thead><tr><th>Sağlayıcı</th><th>Rolü</th><th>Paylaşılan veri</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Anthropic</strong> (ABD)</td><td>Yapay zeka analiz servisi</td><td>Yüklediğiniz ekran görüntüsü, seçtiğiniz ton/mod, varsa karakter profili tercihleri</td></tr>
+      <tr><td><strong>RevenueCat</strong> (ABD)</td><td>Abonelik yönetimi</td><td>Anonim cihaz kimliği; satın alma yaptıysanız ürün ve abonelik bilgileri</td></tr>
+      <tr><td><strong>Supabase</strong> (AB — Frankfurt)</td><td>Sunucu ve veritabanı altyapısı</td><td>Anonim cihaz kimliği, bildirim token'ı, zaman damgaları</td></tr>
+      <tr><td><strong>Expo</strong> (ABD)</td><td>Bildirim gönderim altyapısı</td><td>Bildirim token'ı</td></tr>
+      <tr><td><strong>Apple / Google</strong></td><td>Uygulama mağazası, ödeme ve bildirim iletimi</td><td>Satın alma işlemleri, ödeme bilgileri (bunlar bize ulaşmaz)</td></tr>
+      <tr><td><strong>PostHog</strong> (etkin değil)</td><td>Ürün analitiği</td><td>Şu an hiçbir veri gönderilmiyor</td></tr>
+    </tbody>
+  </table>
+  <p>Verilerinizi hiçbir şekilde üçüncü taraflara pazarlama amacıyla satmıyor veya
+  kiralamıyoruz.</p>
+
+  <h2>4. Verileri Ne Kadar Süre Saklıyoruz</h2>
+  <ul>
+    <li><strong>Kullanım kotası sayacı:</strong> İçerik barındırmayan, yalnızca cihaz kimliği ve
+    zaman damgasından oluşan bu kayıt, kötüye kullanımı önlemek amacıyla en fazla 30 gün
+    saklanır ve otomatik olarak silinir. Yalnızca son 24 saatlik dönem, günlük ücretsiz kullanım
+    hakkınızı hesaplamak için okunur.</li>
+    <li><strong>Bildirim token'ı:</strong> En fazla 30 gün saklanır, otomatik olarak silinir;
+    "Verilerimi Sil" ile anında silinebilir (bkz. Madde 6).</li>
+    <li><strong>Ekran görüntüleri:</strong> Hiçbir zaman kalıcı olarak saklanmaz; işlem bitince
+    bellekten silinir.</li>
+    <li><strong>Silme talebi kaydı:</strong> "Verilerimi Sil" işleminin ne zaman yapıldığını
+    gösteren, içerik barındırmayan bir kayıt en fazla 30 gün saklanır.</li>
+    <li><strong>IP adresi kaydı:</strong> En fazla 24 saat saklanır, otomatik olarak silinir.</li>
+  </ul>
+
+  <h2>5. Verileriniz Nerede Saklanır</h2>
+  <p>Sunucu altyapımız Avrupa Birliği'nde (Frankfurt, Almanya) barındırılır. Anthropic,
+  RevenueCat ve (etkinleştirildiğinde) PostHog gibi bazı hizmet sağlayıcılarımız Amerika
+  Birleşik Devletleri'nde yer almaktadır; verileriniz bu sağlayıcılara iletildiğinde AB
+  sınırları dışına çıkabilir. Bu tür transferler, GDPR'ın 46. maddesi kapsamında standart
+  sözleşme hükümleri (SCC) gibi uygun koruma mekanizmalarına dayanılarak gerçekleştirilir.</p>
+
+  <h2>6. Haklarınız</h2>
+  <p>KVKK'nın 11. maddesi ve GDPR'ın 15-22. maddeleri kapsamında şu haklara sahipsiniz:
+  verilerinizin işlenip işlenmediğini öğrenme, işlenen verilere erişme, yanlış işlenen verilerin
+  düzeltilmesini isteme, verilerin silinmesini isteme, işlemeye itiraz etme ve (rıza gerektiren
+  işlemler için) rızanızı geri çekme.</p>
+  <ul>
+    <li><strong>Uygulama içinden silme:</strong> Ayarlar &rarr; <em>Verilerimi sil</em>, bu
+    cihazın sunucudaki bildirim token'ını hemen kaldırır ve cihazınızda saklı karakter
+    profilinizi siler. İçerik barındırmayan, anonim kullanım kotası sayacı (cihaz kimliği +
+    zaman damgaları; kötüye kullanımı önlemek için meşru menfaat gereği en fazla 30 gün
+    tutulur) bu işlemle silinmez, süresi dolunca kendiliğinden silinir.</li>
+    <li><strong>Uygulamayı silme:</strong> Uygulamayı cihazınızdan kaldırmanız, cihaz
+    kimliğinizi ve karakter profilinizi cihazınızdan siler; sunucu tarafındaki kayıtlar
+    yukarıdaki süreler içinde kendiliğinden silinir.</li>
+    <li><strong>Doğrudan talep:</strong>
+    <a href="mailto:velalabss@gmail.com">velalabss@gmail.com</a> adresine yazarak
+    verilerinizle ilgili her türlü talebi iletebilirsiniz; taleplere en geç 30 gün içinde yanıt
+    veririz.</li>
+    <li><strong>Şikâyet hakkı:</strong> Türkiye'de Kişisel Verileri Koruma Kurumu'na, Avrupa
+    Birliği'nde ise bulunduğunuz ülkenin yetkili veri koruma otoritesine şikâyette bulunma
+    hakkınız vardır.</li>
+  </ul>
+
+  <h2>7. Çocukların Gizliliği</h2>
+  <p>VYBE. 18 yaşından küçükler için tasarlanmamıştır ve onlara yönelik değildir. 18
+  yaşından küçük bir kullanıcıdan bilerek veri toplamıyoruz. Böyle bir durumdan haberdar
+  olmamız hâlinde ilgili verileri derhâl sileriz.</p>
+
+  <h2>8. Değişiklikler</h2>
+  <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişiklikleri Uygulama içinde
+  bildiririz; güncel sürüm her zaman bu belgede ve Uygulama içindeki Gizlilik ekranında yer
+  alır.</p>
+
+  <h2>9. İletişim</h2>
+  <p>Sorularınız için:
+  <a href="mailto:velalabss@gmail.com">velalabss@gmail.com</a></p>
+
+  <footer>VYBE. · <a href="mailto:velalabss@gmail.com">velalabss@gmail.com</a></footer>
+</main>
+</body>
+</html>

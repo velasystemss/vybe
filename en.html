@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>Privacy Policy</title>
+<style>
+  :root { --accent:#6C5CE7; --ink:#12121A; --muted:#4A4A5A; --line:#E4E4EC; --bg:#FFFFFF; }
+  @media (prefers-color-scheme: dark) {
+    :root { --accent:#8577F0; --ink:#F4F4F8; --muted:#B8B8C6; --line:#2A2A38; --bg:#12121A; }
+  }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  main { max-width:720px; margin:0 auto; padding:40px 20px 80px; }
+  h1 { font-size:1.7rem; line-height:1.25; margin:0 0 .25rem; }
+  h2 { font-size:1.15rem; margin:2.2rem 0 .6rem; padding-top:1rem; border-top:1px solid var(--line); }
+  h3 { font-size:1rem; margin:1.4rem 0 .4rem; }
+  p, li { color:var(--ink); }
+  .lead { color:var(--muted); }
+  .updated { color:var(--muted); font-size:.9rem; margin:0 0 1.5rem; }
+  a { color:var(--accent); }
+  ul { padding-left:1.25rem; }
+  li { margin:.3rem 0; }
+  table { width:100%; border-collapse:collapse; margin:.75rem 0; font-size:.93rem; display:block; overflow-x:auto; }
+  th, td { text-align:left; vertical-align:top; padding:.5rem .6rem; border:1px solid var(--line); }
+  th { background:color-mix(in srgb, var(--accent) 10%, transparent); font-weight:600; }
+  code { background:color-mix(in srgb, var(--muted) 15%, transparent); padding:.1em .35em; border-radius:4px; font-size:.9em; }
+  footer { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><a href="./">Türkçe</a> · <strong>English</strong></p>
+  <h1>Privacy Policy</h1>
+  <p class="updated"><strong>Last updated: 7 September 2026</strong></p>
+  <h2>1. Data Controller and Contact</h2>
+  <p>VYBE. is operated by an independent individual developer, who is the data controller for the data processed within this App (the "Developer", "we"). There is no incorporated company.</p>
+  <p>For all privacy-related questions and requests: velalabss@gmail.com</p>
+  <h2>2. What Data We Collect, and Why</h2>
+  <h3>a. Anonymous device identifier</h3>
+  <p>When you first open the App, a random identifier (UUID) is generated on your device and stored in your device's secure storage (iOS Keychain / Android Keystore). This identifier does not reveal your name, your email address or the identity of the person using the device; it is used only to track your free usage quota and to recognise your optional subscription.</p>
+  <h3>b. Screenshots you upload</h3>
+  <p>The screenshot you select for analysis is sent, via our servers, to our AI service provider (Anthropic) for the purpose of generating reply suggestions. The image is held in memory for the duration of the request and is not stored permanently on any of our servers.</p>
+  <h3>c. Subscription status</h3>
+  <p>To verify whether you are a VYBE. Premium subscriber, your anonymous device identifier is sent to our subscription infrastructure provider, RevenueCat, with each suggestion request. When you make a purchase, the product identifier, the purchase/expiry dates and the subscription status are stored on RevenueCat's side. Your card or payment details never reach us or RevenueCat; that information is processed directly by Apple/Google.</p>
+  <h3>d. Notification token (optional)</h3>
+  <p>If you grant notification permission, a notification token specific to your device is stored on our server together with your anonymous device identifier.</p>
+  <h3>e. Usage analytics</h3>
+  <p>The App includes an analytics infrastructure capable of collecting anonymous usage statistics for product-development purposes (for example, which tone was selected, or whether an operation succeeded). This feature is currently disabled; even when enabled, no message content, screenshot or suggestion text is sent — only anonymous interaction metadata is collected.</p>
+  <h3>f. IP address (abuse protection)</h3>
+  <p>When you request reply suggestions, the IP address the request comes from is temporarily recorded to block automated and bulk requests. This record is kept for a maximum of 24 hours and is then deleted automatically; it is not linked to your device ID or to any content.</p>
+  <h3>g. Data that stays on your device and never reaches us</h3>
+  <p>The following information is stored only on your device and is never sent to our servers: the character profile you optionally provide (age range and style preference — these are sent to the server, only with your permission and together with the single relevant request, solely to produce more personalised suggestions), your language preference, and whether you have seen the onboarding screen.</p>
+  <h3>Data we do not collect</h3>
+  <p>We do not collect your name, email address, phone number, location, contacts or social media accounts. We have no access to your messaging apps; we process an image only when you select and upload a screenshot yourself.</p>
+  <h2>3. Who We Share Your Data With</h2>
+  <p>Your data is shared with the following service providers, only for the purposes stated:</p>
+  <ul>
+    <li>Anthropic (USA) — AI analysis service. Data shared: the screenshot you upload, the tone/mode you select, and your character profile preferences if any.</li>
+    <li>RevenueCat (USA) — subscription management. Data shared: the anonymous device identifier; product and subscription information if you have made a purchase.</li>
+    <li>Supabase (EU — Frankfurt) — server and database infrastructure. Data shared: the anonymous device identifier, the notification token, timestamps.</li>
+    <li>Expo (USA) — notification delivery infrastructure. Data shared: the notification token.</li>
+    <li>Apple / Google — app store, payment, and notification delivery. Data shared: purchase transactions, payment information (this does not reach us).</li>
+    <li>PostHog (not active) — product analytics. No data is currently sent.</li>
+  </ul>
+  <p>We do not sell or rent your data to third parties for marketing purposes under any circumstances.</p>
+  <h2>4. How Long We Keep Data</h2>
+  <ul>
+    <li>Usage-quota counter: This record contains no content and consists only of the device identifier and a timestamp. It is kept for at most 30 days to prevent abuse and is then deleted automatically. Only the most recent 24-hour period is read, in order to calculate your daily free-usage allowance.</li>
+    <li>Notification token: Kept for at most 30 days and deleted automatically; it can be deleted immediately via "Delete my data" (see Section 6).</li>
+    <li>Screenshots: Never stored permanently; erased from memory once processing is complete.</li>
+    <li>Deletion-request record: A record with no content, showing when a "Delete my data" action was performed, is kept for at most 30 days.</li>
+    <li>IP address record: kept for a maximum of 24 hours, deleted automatically.</li>
+  </ul>
+  <h2>5. Where Your Data Is Stored</h2>
+  <p>Our server infrastructure is hosted in the European Union (Frankfurt, Germany). Some of our service providers — such as Anthropic, RevenueCat and, when enabled, PostHog — are located in the United States; when your data is transmitted to these providers it may leave the EU. Such transfers are carried out on the basis of appropriate safeguards, such as Standard Contractual Clauses (SCCs), under Article 46 of the GDPR.</p>
+  <h2>6. Your Rights</h2>
+  <p>Under Article 11 of the KVKK and Articles 15–22 of the GDPR, you have the right to: learn whether your data is being processed, access the data being processed, request the correction of data processed incorrectly, request the erasure of your data, object to processing, and — for processing that relies on consent — withdraw your consent.</p>
+  <ul>
+    <li>In-app deletion: Settings → "Delete my data" immediately removes this device's notification token from the server and deletes the character profile stored on your device. The anonymous usage-quota counter — which contains no content (device identifier + timestamps; retained for at most 30 days on legitimate-interest grounds to prevent abuse) — is not deleted by this action and erases itself when its retention period expires.</li>
+    <li>Deleting the App: Removing the App from your device deletes your device identifier and character profile from your device; server-side records are deleted automatically within the periods stated above.</li>
+    <li>Direct request: You can send any request regarding your data to velalabss@gmail.com; we respond to requests within 30 days at the latest.</li>
+    <li>Right to complain: You have the right to lodge a complaint with the Personal Data Protection Authority in Türkiye, or with the competent data protection authority of your country of residence in the European Union.</li>
+  </ul>
+  <h2>7. Children's Privacy</h2>
+  <p>VYBE. is not designed for or directed at anyone under the age of 18. We do not knowingly collect data from a user under 18. If we become aware of such a case, we will delete the relevant data immediately.</p>
+  <h2>8. Changes</h2>
+  <p>We may update this policy from time to time. We will announce significant changes within the App; the current version is always available in this document and on the Privacy screen within the App.</p>
+  <h2>9. Contact</h2>
+  <p>For questions: velalabss@gmail.com</p>
+</main>
+</body>
+</html>
