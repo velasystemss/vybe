@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +53,7 @@
   <h3>e. Usage analytics</h3>
   <p>The App includes an analytics infrastructure capable of collecting anonymous usage statistics for product-development purposes (for example, which tone was selected, or whether an operation succeeded). This feature is currently disabled; even when enabled, no message content, screenshot or suggestion text is sent — only anonymous interaction metadata is collected.</p>
   <h3>f. IP address (abuse protection)</h3>
-  <p>When you request reply suggestions, the IP address the request comes from is temporarily recorded to block automated and bulk requests. This record is kept for a maximum of 24 hours and is then deleted automatically; it is not linked to your device ID or to any content.</p>
+  <p>When the App sends a request to our servers — for reply suggestions, to refresh your usage count, to register a notification token or to delete your data — the IP address the request comes from is temporarily recorded together with a request count, to block automated and bulk requests and to limit how many reply suggestions one address can receive per day. These records are kept for a maximum of 3 days and then deleted automatically; they are not linked to your device ID or to any content.</p>
   <h3>g. Data that stays on your device and never reaches us</h3>
   <p>The following information is stored only on your device and is never sent to our servers: the character profile you optionally provide (age range and style preference — these are sent to the server, only with your permission and together with the single relevant request, solely to produce more personalised suggestions), your language preference, and whether you have seen the onboarding screen.</p>
   <h3>Data we do not collect</h3>
@@ -75,7 +75,7 @@
     <li>Notification token: Kept for at most 30 days and deleted automatically; it can be deleted immediately via "Delete my data" (see Section 6).</li>
     <li>Screenshots: Never stored permanently; erased from memory once processing is complete.</li>
     <li>Deletion-request record: A record with no content, showing when a "Delete my data" action was performed, is kept for at most 30 days.</li>
-    <li>IP address record: kept for a maximum of 24 hours, deleted automatically.</li>
+    <li>IP address records: kept for a maximum of 3 days, deleted automatically.</li>
   </ul>
   <h2>5. Where Your Data Is Stored</h2>
   <p>Our server infrastructure is hosted in the European Union (Frankfurt, Germany). Some of our service providers — such as Anthropic, RevenueCat and, when enabled, PostHog — are located in the United States; when your data is transmitted to these providers it may leave the EU. Such transfers are carried out on the basis of appropriate safeguards, such as Standard Contractual Clauses (SCCs), under Article 46 of the GDPR.</p>
