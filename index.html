@@ -56,8 +56,9 @@
   <h3>a. Anonim cihaz kimliği</h3>
   <p>Uygulamayı ilk açtığınızda, cihazınızda rastgele bir kimlik (UUID) üretilir ve cihazınızın
   güvenli deposunda (iOS Keychain / Android Keystore) saklanır. Bu kimlik, adınızı, e-posta
-  adresinizi veya cihazınızı kullanan kişiyi belirlemez; yalnızca ücretsiz kullanım kotanızı
-  takip etmek ve isteğe bağlı aboneliğinizi tanımlamak için kullanılır.</p>
+  adresinizi veya cihazınızı kullanan kişiyi belirlemez; yalnızca her cihaza verilen tek
+  seferlik ücretsiz üretim hakkını uygulamak, kötüye kullanımı önlemek ve isteğe bağlı
+  aboneliğinizi tanımlamak için kullanılır.</p>
 
   <h3>b. Yüklediğiniz ekran görüntüleri</h3>
   <p>Analiz için seçtiğiniz ekran görüntüsü, cevap önerileri üretilmesi amacıyla sunucularımız
@@ -152,9 +153,12 @@
   <ul>
     <li><strong>Uygulama içinden silme:</strong> Ayarlar &rarr; <em>Verilerimi sil</em>, bu
     cihazın sunucudaki bildirim token'ını hemen kaldırır ve cihazınızda saklı karakter
-    profilinizi siler. İçerik barındırmayan, anonim kullanım kotası sayacı (cihaz kimliği +
-    zaman damgaları; kötüye kullanımı önlemek için meşru menfaat gereği en fazla 30 gün
-    tutulur) bu işlemle silinmez, süresi dolunca kendiliğinden silinir.</li>
+    profilinizi siler. Hiçbiri içerik barındırmayan iki kayıt bu işlemle silinmez: kötüye
+    kullanımı önlemeye yarayan anonim sayaç (cihaz kimliği + zaman damgaları; meşru menfaat
+    gereği en fazla 30 gün tutulur), ki süresi dolunca kendiliğinden silinir; ve bu cihazın
+    tek seferlik ücretsiz üretim hakkını kullandığını gösteren tek bir zaman damgası, ki
+    silinmesi aynı cihaza yeni bir ücretsiz hak vereceğinden, ücretsiz deneme kuralı geçerli
+    olduğu sürece saklanır.</li>
     <li><strong>Uygulamayı silme:</strong> Uygulamayı cihazınızdan kaldırmanız, cihaz
     kimliğinizi ve karakter profilinizi cihazınızdan siler; sunucu tarafındaki kayıtlar
     yukarıdaki süreler içinde kendiliğinden silinir.</li>

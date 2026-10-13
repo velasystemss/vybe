@@ -43,7 +43,7 @@
   <p>For all privacy-related questions and requests: velalabss@gmail.com</p>
   <h2>2. What Data We Collect, and Why</h2>
   <h3>a. Anonymous device identifier</h3>
-  <p>When you first open the App, a random identifier (UUID) is generated on your device and stored in your device's secure storage (iOS Keychain / Android Keystore). This identifier does not reveal your name, your email address or the identity of the person using the device; it is used only to track your free usage quota and to recognise your optional subscription.</p>
+  <p>When you first open the App, a random identifier (UUID) is generated on your device and stored in your device's secure storage (iOS Keychain / Android Keystore). This identifier does not reveal your name, your email address or the identity of the person using the device; it is used only to apply the one free generation each device receives, to prevent abuse, and to recognise your optional subscription.</p>
   <h3>b. Screenshots you upload</h3>
   <p>The screenshot you select for analysis is sent, via our servers, to our AI service provider (Anthropic) for the purpose of generating reply suggestions. The image is held in memory for the duration of the request and is not stored permanently on any of our servers.</p>
   <h3>c. Subscription status</h3>
@@ -83,7 +83,7 @@
   <h2>6. Your Rights</h2>
   <p>Under Article 11 of the KVKK and Articles 15–22 of the GDPR, you have the right to: learn whether your data is being processed, access the data being processed, request the correction of data processed incorrectly, request the erasure of your data, object to processing, and — for processing that relies on consent — withdraw your consent.</p>
   <ul>
-    <li>In-app deletion: Settings → "Delete my data" immediately removes this device's notification token from the server and deletes the character profile stored on your device. The anonymous usage-quota counter — which contains no content (device identifier + timestamps; retained for at most 30 days on legitimate-interest grounds to prevent abuse) — is not deleted by this action and erases itself when its retention period expires.</li>
+    <li>In-app deletion: Settings → "Delete my data" immediately removes this device's notification token from the server and deletes the character profile stored on your device. Two records are not deleted by this action, neither of which contains any content: the anonymous abuse-prevention counter (device identifier + timestamps; retained for at most 30 days on legitimate-interest grounds to prevent abuse), which erases itself when its retention period expires; and the single timestamp recording that this device has already used its one free generation, which is kept for as long as the free-trial rule applies, because deleting it would hand the same device another free generation.</li>
     <li>Deleting the App: Removing the App from your device deletes your device identifier and character profile from your device; server-side records are deleted automatically within the periods stated above.</li>
     <li>Direct request: You can send any request regarding your data to velalabss@gmail.com; we respond to requests within 30 days at the latest.</li>
     <li>Right to complain: You have the right to lodge a complaint with the Personal Data Protection Authority in Türkiye, or with the competent data protection authority of your country of residence in the European Union.</li>
