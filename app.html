@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>VYBE. — ne yazacağını bilir</title>
+<meta name="description" content="Sohbetin ekran görüntüsünü at, tonunu seç, saniyeler içinde üç cevap al. iOS için VYBE.">
+
+<!-- ===================================================================
+     META PIXEL ALANI — Meta Pixel temel kodunu buraya yapıştırın.
+     Bu sayfa bugün hiçbir şey yüklemiyor: analitik yok, üçüncü taraf
+     isteği yok. Pixel eklemek sayfanın Meta betiğini yüklemesine yol
+     açar; açmadan önce gizlilik politikasına bir satır gerekebilir.
+     =================================================================== -->
+
+<style>
+  :root { --accent:#6C5CE7; --ink:#12121A; --muted:#4A4A5A; --line:#E4E4EC; --bg:#FFFFFF; --onAccent:#FFFFFF; }
+  @media (prefers-color-scheme: dark) {
+    :root { --accent:#8577F0; --ink:#F4F4F8; --muted:#B8B8C6; --line:#2A2A38; --bg:#12121A; --onAccent:#0E0E16; }
+  }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  main { max-width:720px; margin:0 auto; padding:28px 20px 56px; }
+  .lang { margin:0 0 20px; }
+  a { color:var(--accent); }
+
+  /* Butona kadar olan her şey bilinçli olarak kompakt: 390x844 bir
+     telefonda başlık, alt başlık ve buton kaydırmadan görünmeli.
+     Butonun üstüne daha uzun hiçbir şey konmaz. */
+  h1 { font-size:2rem; line-height:1.15; letter-spacing:-.02em; margin:0 0 .5rem; }
+  h1 .dot { color:var(--accent); }
+  .sub { color:var(--muted); font-size:1.05rem; margin:0 0 22px; }
+
+  .cta {
+    display:block; width:100%; max-width:420px; margin:0 0 10px;
+    background:var(--accent); color:var(--onAccent);
+    text-align:center; text-decoration:none; font-size:1.1rem; font-weight:600;
+    padding:18px 24px; border-radius:14px;
+  }
+  .cta:hover { filter:brightness(1.08); }
+  .note { color:var(--muted); font-size:.9rem; margin:0 0 28px; }
+
+  ul.points { list-style:none; padding:0; margin:0 0 28px; border-top:1px solid var(--line); }
+  ul.points li { padding:14px 0; border-bottom:1px solid var(--line); }
+  ul.points strong { display:block; }
+  ul.points span { color:var(--muted); font-size:.95rem; }
+
+  footer { margin-top:8px; padding-top:1rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><strong>Türkçe</strong> · <a href="./app-en.html">English</a></p>
+
+  <h1>VYBE<span class="dot">.</span> ne yazacağını bilir</h1>
+  <p class="sub">Sohbetin ekran görüntüsünü at, tonunu seç, saniyeler içinde üç cevap al.</p>
+
+  <!-- META PIXEL TIKLAMA OLAYI ALANI — tıklama olayını (örneğin
+       fbq('track', …) çağıran bir onclick) bu bağlantıya ekleyin.
+       Bilerek boş bırakıldı: bugün hiçbir takip kodu yayınlanmıyor. -->
+  <a class="cta" href="https://apps.apple.com/app/id6815186127">App Store'dan İndir</a>
+  <p class="note">Yalnızca iOS. Türkçe ve İngilizce kullanılabilir.</p>
+
+  <ul class="points">
+    <li><strong>Herhangi bir sohbetin ekran görüntüsünü yükle</strong><span>Her mesajlaşma uygulamasıyla çalışır — konuşmayı görselden okur.</span></li>
+    <li><strong>Sekiz ton arasından seç</strong><span>Flörtöz, komik, resmi iş, patron, mail, aile grubu, pasif agresif, agresif.</span></li>
+    <li><strong>Hazır üç cevap al</strong><span>Birine dokunup kopyala, sohbete yapıştır.</span></li>
+  </ul>
+
+  <footer><a href="./index.html">Gizlilik Politikası</a> · <a href="./terms.html">Kullanım Şartları</a><br>2026 Gokberk Şenel (Vela Systems)</footer>
+</main>
+</body>
+</html>
