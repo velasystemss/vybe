@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#09080D">
 <title>VYBE. — knows what to say</title>
 <meta name="description" content="Screenshot the chat, pick a tone, get three replies in seconds. VYBE. for iOS.">
 
@@ -15,49 +17,123 @@
      =================================================================== -->
 
 <style>
-  :root { --accent:#6C5CE7; --ink:#12121A; --muted:#4A4A5A; --line:#E4E4EC; --bg:#FFFFFF; --onAccent:#FFFFFF; }
-  @media (prefers-color-scheme: dark) {
-    :root { --accent:#8577F0; --ink:#F4F4F8; --muted:#B8B8C6; --line:#2A2A38; --bg:#12121A; --onAccent:#0E0E16; }
+  /* Aurora Glass — the same look as the App Store screenshots.
+     This page is dark by design in both languages: no prefers-color-scheme
+     block here, so it renders identically whatever the device is set to.
+     The privacy, terms and support pages keep their own light/dark theme. */
+  :root {
+    --violet:#8B5CF6; --violet-lit:#A78BFA; --amber:#B87A15;
+    --ink:#F7F5FF; --muted:rgba(247,245,255,.66); --faint:rgba(247,245,255,.46);
+    --line:rgba(247,245,255,.10); --deep:#0E0C15;
   }
   * { box-sizing:border-box; }
   html { -webkit-text-size-adjust:100%; }
   body {
-    margin:0; background:var(--bg); color:var(--ink);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    margin:0; min-height:100vh; min-height:100dvh;
+    background:linear-gradient(180deg,#0E0C15 0%,#09080D 38%,#07060A 100%);
+    color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI Variable Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
   }
-  main { max-width:720px; margin:0 auto; padding:28px 20px 56px; }
-  .lang { margin:0 0 20px; }
-  a { color:var(--accent); }
 
-  /* Everything down to the button is deliberately compact: on a 390x844
-     phone the headline, the subline and the button must all be visible
-     without scrolling. Nothing taller goes above the button. */
-  h1 { font-size:2rem; line-height:1.15; letter-spacing:-.02em; margin:0 0 .5rem; }
-  h1 .dot { color:var(--accent); }
-  .sub { color:var(--muted); font-size:1.05rem; margin:0 0 22px; }
+  /* --- atmosphere: glows + grain, all behind the content --- */
+  .bg { position:fixed; inset:0; overflow:hidden; z-index:0; pointer-events:none; }
+  .glow { position:absolute; border-radius:50%; }
+  /* The big violet one sits behind and below the headline. Sized in vw, not
+     vmax: on a tall phone vmax is the HEIGHT, which made the glow ~3x the
+     viewport width and flooded the whole page lavender. The App Store
+     frames use a glow about 1.4x the canvas width, so 140vw it is. */
+  .g-main {
+    width:140vw; height:140vw; left:50%; top:30%;
+    transform:translate(-50%,-30%);
+    background:radial-gradient(circle,
+      rgba(139,92,246,.62) 0%, rgba(139,92,246,.22) 40%, rgba(139,92,246,0) 70%);
+  }
+  /* a much fainter haze toward the top right */
+  .g-haze {
+    width:86vw; height:66vw; right:-30vw; top:-18vw;
+    background:radial-gradient(circle, rgba(139,92,246,.20), rgba(139,92,246,0) 70%);
+  }
+  /* and a small amber one in the bottom left corner */
+  .g-amber {
+    width:58vw; height:58vw; left:-22vw; bottom:-18vw;
+    background:radial-gradient(circle, rgba(184,122,21,.22), rgba(184,122,21,0) 70%);
+  }
+  /* grain, so the gradient cannot band on a phone screen */
+  .grain { position:absolute; inset:0; opacity:.06; mix-blend-mode:overlay; }
 
+  /* --- content --- */
+  main {
+    position:relative; z-index:1;
+    max-width:600px; margin:0 auto;
+    padding:22px 22px 44px;
+    text-align:center;
+  }
+  .lang { margin:0 0 clamp(18px,6vh,46px); font-size:.86rem; color:var(--faint); letter-spacing:.01em; }
+  .lang a { color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line); }
+  .lang a:hover { color:var(--ink); }
+  .lang strong { color:var(--ink); font-weight:600; }
+
+  h1 {
+    font-weight:800; letter-spacing:-.035em;
+    font-size:clamp(2.35rem, 11.4vw, 3.4rem); line-height:1.04;
+    margin:0 0 .45em; color:var(--ink);
+  }
+  h1 .v { color:var(--violet-lit); }
+  h1 .dot { color:var(--amber); }
+
+  .sub {
+    color:var(--muted); font-size:clamp(1rem,4.1vw,1.12rem); line-height:1.5;
+    margin:0 auto clamp(22px,4.4vh,34px); max-width:30ch;
+  }
+
+  /* the brightest block on the page — this is what the ad pays for */
   .cta {
-    display:block; width:100%; max-width:420px; margin:0 0 10px;
-    background:var(--accent); color:var(--onAccent);
-    text-align:center; text-decoration:none; font-size:1.1rem; font-weight:600;
-    padding:18px 24px; border-radius:14px;
+    display:block; width:100%; max-width:400px; margin:0 auto 12px;
+    background:var(--ink); color:var(--deep);
+    font-size:1.08rem; font-weight:700; letter-spacing:-.01em;
+    text-decoration:none; text-align:center;
+    padding:19px 26px; border-radius:16px;
+    box-shadow:0 0 0 1px rgba(247,245,255,.18), 0 18px 44px rgba(139,92,246,.38);
   }
-  .cta:hover { filter:brightness(1.08); }
-  .note { color:var(--muted); font-size:.9rem; margin:0 0 28px; }
+  .cta:hover { box-shadow:0 0 0 1px rgba(247,245,255,.3), 0 22px 56px rgba(139,92,246,.5); }
+  .note { color:var(--faint); font-size:.88rem; margin:0 0 clamp(26px,5vh,44px); }
 
-  ul.points { list-style:none; padding:0; margin:0 0 28px; border-top:1px solid var(--line); }
-  ul.points li { padding:14px 0; border-bottom:1px solid var(--line); }
-  ul.points strong { display:block; }
-  ul.points span { color:var(--muted); font-size:.95rem; }
+  /* quiet supporting detail, deliberately below the button */
+  ul.points { list-style:none; padding:0; margin:0 0 30px; text-align:left; }
+  ul.points li { padding:13px 0; border-top:1px solid var(--line); }
+  ul.points li:last-child { border-bottom:1px solid var(--line); }
+  ul.points b { display:block; font-weight:600; font-size:.95rem; color:rgba(247,245,255,.86); }
+  ul.points span { color:rgba(247,245,255,.52); font-size:.88rem; line-height:1.45; }
 
-  footer { margin-top:8px; padding-top:1rem; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+  footer { color:var(--faint); font-size:.84rem; }
+  footer a { color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line); }
+  footer a:hover { color:var(--ink); }
+
+  /* short screens: tighten the lead-in so the button cannot slip under the fold */
+  @media (max-height:700px) {
+    main { padding-top:16px; }
+    .lang { margin-bottom:14px; }
+    h1 { font-size:clamp(2.1rem,9.6vw,2.6rem); }
+  }
 </style>
 </head>
 <body>
+
+<div class="bg" aria-hidden="true">
+  <div class="glow g-haze"></div>
+  <div class="glow g-main"></div>
+  <div class="glow g-amber"></div>
+  <svg class="grain" width="100%" height="100%">
+    <filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#n)"/>
+  </svg>
+</div>
+
 <main>
   <p class="lang"><a href="./app.html">Türkçe</a> · <strong>English</strong></p>
 
-  <h1>VYBE<span class="dot">.</span> knows what to say</h1>
+  <h1>VYBE<span class="dot">.</span> knows<br><span class="v">what to say</span></h1>
   <p class="sub">Screenshot the chat, pick a tone, get three replies in seconds.</p>
 
   <!-- META PIXEL CLICK EVENT SLOT — add the click handler / event call on
@@ -67,9 +143,9 @@
   <p class="note">iOS only. Available in Turkish and English.</p>
 
   <ul class="points">
-    <li><strong>Upload any chat screenshot</strong><span>Works with any messaging app — it reads the conversation from the image.</span></li>
-    <li><strong>Choose from eight tones</strong><span>Flirty, funny, formal, boss, email, family group, passive-aggressive, aggressive.</span></li>
-    <li><strong>Get three ready replies</strong><span>Tap one to copy it, then paste it into the chat.</span></li>
+    <li><b>Upload any chat screenshot</b><span>Works with any messaging app — it reads the conversation from the image.</span></li>
+    <li><b>Choose from eight tones</b><span>Flirty, funny, formal, boss, email, family group, passive-aggressive, aggressive.</span></li>
+    <li><b>Get three ready replies</b><span>Tap one to copy it, then paste it into the chat.</span></li>
   </ul>
 
   <footer><a href="./en.html">Privacy Policy</a> · <a href="./terms-en.html">Terms of Use</a><br>2026 Gokberk Şenel (Vela Systems)</footer>
