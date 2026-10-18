@@ -9,12 +9,34 @@
 <title>VYBE. — ne yazacağını bilir</title>
 <meta name="description" content="Sohbetin ekran görüntüsünü at, tonunu seç, saniyeler içinde üç cevap al. iOS için VYBE.">
 
-<!-- ===================================================================
-     META PIXEL ALANI — Meta Pixel temel kodunu buraya yapıştırın.
-     Bu sayfa bugün hiçbir şey yüklemiyor: analitik yok, üçüncü taraf
-     isteği yok. Pixel eklemek sayfanın Meta betiğini yüklemesine yol
-     açar; açmadan önce gizlilik politikasına bir satır gerekebilir.
-     =================================================================== -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1806983713967351');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1806983713967351&ev=PageView&noscript=1"
+alt=""></noscript>
+<!-- End Meta Pixel Code -->
+
+<script>
+/* Defined in <head> so the handler exists before the page can be tapped.
+   It is deliberately tiny and cannot block navigation — see the comment
+   on the function body. */
+window.vybeAppStoreClick = function () {
+  try { if (typeof fbq === 'function') fbq('trackCustom', 'AppStoreClick'); } catch (e) {}
+  return true;
+};
+</script>
+
 
 <style>
   /* Aurora Glass — App Store ekran görüntüleriyle aynı yüzey.
@@ -190,10 +212,10 @@
     <h1>Ne yazacağını<br>VYBE<span class="dot">.</span> <span class="v">bilir</span></h1>
     <p class="sub">Sohbetin ekran görüntüsünü at, tonunu seç, saniyeler içinde üç cevap al.</p>
 
-    <!-- META PIXEL TIKLAMA OLAYI ALANI — tıklama olayını (örneğin
-         fbq('track', …) çağıran bir onclick) bu bağlantıya ekleyin.
-         Bilerek boş bırakıldı: bugün hiçbir takip kodu yayınlanmıyor. -->
-    <a class="cta" href="https://apps.apple.com/app/id6815186127">App Store'dan İndir</a>
+    <!-- Meta Pixel: onclick, sayfanın altında tanımlı vybeAppStoreClick()
+         üzerinden AppStoreClick özel olayını gönderir. Yönlendirmeyi asla
+         engellemez ya da geciktirmez. -->
+    <a class="cta" href="https://apps.apple.com/app/id6815186127" onclick="vybeAppStoreClick()">App Store'dan İndir</a>
     <p class="note">Yalnızca iOS. Türkçe ve İngilizce kullanılabilir.</p>
     <div class="cue" aria-hidden="true"></div>
   </header>
@@ -281,9 +303,8 @@
   <section class="close reveal">
     <h2>Boş cevap kutusuna bakmayı bırak</h2>
     <p class="sub">İlk cevap bizden — sonra sen karar ver.</p>
-    <!-- META PIXEL TIKLAMA OLAYI ALANI (kapanış butonu) — her iki butonu
-         da ölçmek istersen hero'daki olayı burada da tekrarla. -->
-    <a class="cta" href="https://apps.apple.com/app/id6815186127">App Store'dan İndir</a>
+    <!-- Meta Pixel: hero butonuyla aynı AppStoreClick olayı. -->
+    <a class="cta" href="https://apps.apple.com/app/id6815186127" onclick="vybeAppStoreClick()">App Store'dan İndir</a>
     <p class="note">Yalnızca iOS. Türkçe ve İngilizce kullanılabilir.</p>
   </section>
 

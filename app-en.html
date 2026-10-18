@@ -9,12 +9,34 @@
 <title>VYBE. — knows what to say</title>
 <meta name="description" content="Screenshot the chat, pick a tone, get three replies in seconds. VYBE. for iOS.">
 
-<!-- ===================================================================
-     META PIXEL SLOT — paste the Meta Pixel base code here.
-     Nothing is loaded from this page today: no analytics, no third-party
-     requests. Adding a pixel makes this page load Meta's script, so the
-     privacy policy may need a line about it before you switch it on.
-     =================================================================== -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1806983713967351');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1806983713967351&ev=PageView&noscript=1"
+alt=""></noscript>
+<!-- End Meta Pixel Code -->
+
+<script>
+/* Defined in <head> so the handler exists before the page can be tapped.
+   It is deliberately tiny and cannot block navigation — see the comment
+   on the function body. */
+window.vybeAppStoreClick = function () {
+  try { if (typeof fbq === 'function') fbq('trackCustom', 'AppStoreClick'); } catch (e) {}
+  return true;
+};
+</script>
+
 
 <style>
   /* Aurora Glass — the same surface as the App Store screenshots.
@@ -190,10 +212,10 @@
     <h1>VYBE<span class="dot">.</span> knows<br><span class="v">what to say</span></h1>
     <p class="sub">Screenshot the chat, pick a tone, get three replies in seconds.</p>
 
-    <!-- META PIXEL CLICK EVENT SLOT — add the click handler / event call on
-         this link (for example an onclick that fires fbq('track', …)).
-         Left empty on purpose: no tracking code ships today. -->
-    <a class="cta" href="https://apps.apple.com/app/id6815186127">Download on the App Store</a>
+    <!-- Meta Pixel: onclick fires the custom AppStoreClick event via
+         vybeAppStoreClick() (defined at the foot of this page). It never
+         blocks or delays the navigation. -->
+    <a class="cta" href="https://apps.apple.com/app/id6815186127" onclick="vybeAppStoreClick()">Download on the App Store</a>
     <p class="note">iOS only. Available in Turkish and English.</p>
     <div class="cue" aria-hidden="true"></div>
   </header>
@@ -281,9 +303,8 @@
   <section class="close reveal">
     <h2>Stop staring at the reply box</h2>
     <p class="sub">One free reply on us — then decide.</p>
-    <!-- META PIXEL CLICK EVENT SLOT (closing button) — mirror the hero
-         click event here if you want both buttons attributed. -->
-    <a class="cta" href="https://apps.apple.com/app/id6815186127">Download on the App Store</a>
+    <!-- Meta Pixel: same AppStoreClick event as the hero button. -->
+    <a class="cta" href="https://apps.apple.com/app/id6815186127" onclick="vybeAppStoreClick()">Download on the App Store</a>
     <p class="note">iOS only. Available in Turkish and English.</p>
   </section>
 
